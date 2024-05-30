@@ -16,9 +16,13 @@ void Print_Menu()
     cout << "4. Выход" << endl;
     cout << ">";
 }
+int a;
 void Menu_1()
 {
     system("cls");
+    
+    cout << "Введите положительное число А: " << endl;
+    cin >> a; cout << endl;
 }
 void Menu_2()
 {
