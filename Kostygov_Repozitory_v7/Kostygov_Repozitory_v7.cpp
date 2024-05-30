@@ -16,17 +16,29 @@ void Print_Menu()
     cout << "4. Выход" << endl;
     cout << ">";
 }
-int a;
+int a = 0;
 void Menu_1()
 {
     system("cls");
-    
     cout << "Введите положительное число А: " << endl;
-    cin >> a; cout << endl;
+    while (!(cin >> a) || (cin.peek() != '\n') || (a < 0 ))
+    {
+        cin.clear();
+        while (cin.get() != '\n');
+        cout << "Сторона треугольника должна быть положительной! Попробуйте снова: ";// выводим сообщение об ошибке
+    }
+    cout << "Сторона треугольника: " << a << endl;
+    
 }
 void Menu_2()
 {
     system("cls");
+    double S;
+    cout << "Площадь равностороннего треугольника S = а2*Sqrt(3)/4: " << endl;
+    if (a != 0 )
+        S =  a * a * sqrt(3) / 4;
+    else cout << "Для начала введите длину стороны треугольника! " << endl;
+    cin >> S; cout << endl;
 }
 void Menu_3()
 {
