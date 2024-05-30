@@ -43,6 +43,12 @@ void Menu_2()
 void Menu_3()
 {
     system("cls");
+    double P;
+    cout << "Периметр равностороннего треугольника Р = 3 * a: " << endl;
+    if (a != 0)
+        P = a * 3;
+    else cout << "Для начала введите длину стороны треугольника! " << endl;
+    cin >> P; cout << endl;
 }
 int get_variant(int count) {
     int variant; // считываемый номер пункта меню
