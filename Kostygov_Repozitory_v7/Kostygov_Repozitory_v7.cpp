@@ -38,7 +38,7 @@ void Menu_2()
     if (a != 0 )
         S =  a * a * sqrt(3) / 4;
     else cout << "Для начала введите длину стороны треугольника! " << endl;
-    cin >> S; cout << endl;
+    cout << S << endl;;
 }
 void Menu_3()
 {
@@ -48,7 +48,7 @@ void Menu_3()
     if (a != 0)
         P = a * 3;
     else cout << "Для начала введите длину стороны треугольника! " << endl;
-    cin >> P; cout << endl;
+    cout << P << endl;
 }
 int get_variant(int count) {
     int variant; // считываемый номер пункта меню
