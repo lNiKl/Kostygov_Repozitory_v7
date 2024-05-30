@@ -59,9 +59,6 @@ int main()
         case 3:
             Menu_3();
             break;
-        case 4:
-            Menu_4();
-            break;
         }
         if (variant != 4)
         {
