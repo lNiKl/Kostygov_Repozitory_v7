@@ -61,15 +61,15 @@ void Menu_2()
     system("cls");
     double S;
     cout << "Площадь равностороннего треугольника S = а2*Sqrt(3)/4: " << endl;
-    AreaTriangle(a);
-    cout << S << endl;;
+    S = AreaTriangle(a);
+    cout << S << endl;
 }
 void Menu_3()
 {
     system("cls");
     double P;
     cout << "Периметр равностороннего треугольника Р = 3 * a: " << endl;
-    PerimetrTriangle(a);
+    P = PerimetrTriangle(a);
     cout << P << endl;
 }
 int get_variant(int count) {

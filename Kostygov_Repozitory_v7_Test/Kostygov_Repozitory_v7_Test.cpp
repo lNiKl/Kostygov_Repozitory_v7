@@ -38,6 +38,29 @@ namespace KostygovRepozitoryv7Test
 			Assert::AreEqual(expected, actual, L"Incorrect value area");
 
 		}
+		// тест на правильное вычисление площади
+		TEST_METHOD(TestMetTriangleleArea_5_108253returnedhod1)
+		{
+			int a = 5;
 
+			double expected = 10.8253;//ожидаемый результат
+
+			double actual = AreaTriangle(a);
+
+			Assert::AreEqual(expected, actual, L"Incorrect value area");
+
+		}
+		// тест на правильное вычисление периметра
+		TEST_METHOD(TestMetTrianglelePerimetr_5_15returnedhod1)
+		{
+			int a = 5;
+
+			double expected = 15;//ожидаемый результат
+
+			double actual = AreaTriangle(a);
+
+			Assert::AreEqual(expected, actual, L"Incorrect value area");
+
+		}
 	};
 }
