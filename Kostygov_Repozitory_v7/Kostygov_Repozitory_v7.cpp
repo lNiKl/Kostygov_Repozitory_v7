@@ -4,7 +4,30 @@
 #include <math.h>
 #include <conio.h>
 #include <locale>
+#include <string>
 using namespace std;
+double AreaTriangle(int a)
+{
+    return a * a * sqrt(3) / 4;
+}
+double PerimetrTriangle(int a)
+{
+    return a * 3;
+}
+bool User_Inpyt(string input)
+{
+    if (input.empty()) return false;
+    try
+    {
+        int number = stoi(input);
+        if (number <= 0) return false;
+    }
+    catch (...)
+    {
+        return false;
+    }
+    return true;
+}
 void Print_Menu()
 {
 
@@ -20,14 +43,17 @@ int a = 0;
 void Menu_1()
 {
     system("cls");
-    cout << "Введите положительное число А: " << endl;
-    while (!(cin >> a) || (cin.peek() != '\n') || (a < 0 ))
+    string str_input;
+
+    cout << "Введите длину стороны равностороннего треугольника: " << endl;
+    getline(cin, str_input);
+
+    while (!User_Inpyt(str_input))
     {
-        cin.clear();
-        while (cin.get() != '\n');
-        cout << "Сторона треугольника должна быть положительной! Попробуйте снова: ";// выводим сообщение об ошибке
+        cout << "Повторите попытку!" << endl;
+        getline(cin, str_input);
     }
-    cout << "Сторона треугольника: " << a << endl;
+    a = stoi(str_input);
     
 }
 void Menu_2()
@@ -35,9 +61,7 @@ void Menu_2()
     system("cls");
     double S;
     cout << "Площадь равностороннего треугольника S = а2*Sqrt(3)/4: " << endl;
-    if (a != 0 )
-        S =  a * a * sqrt(3) / 4;
-    else cout << "Для начала введите длину стороны треугольника! " << endl;
+    AreaTriangle(a);
     cout << S << endl;;
 }
 void Menu_3()
@@ -45,9 +69,7 @@ void Menu_3()
     system("cls");
     double P;
     cout << "Периметр равностороннего треугольника Р = 3 * a: " << endl;
-    if (a != 0)
-        P = a * 3;
-    else cout << "Для начала введите длину стороны треугольника! " << endl;
+    PerimetrTriangle(a);
     cout << P << endl;
 }
 int get_variant(int count) {

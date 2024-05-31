@@ -167,6 +167,11 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kostygov_Repozitory_v7\Kostygov_Repozitory_v7.vcxproj">
+      <Project>{a5da580e-0110-4ba7-aab4-6de949dfcd9f}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
